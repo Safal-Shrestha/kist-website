@@ -1,0 +1,101 @@
+body
+{
+    margin: 0px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+}
+
+.logo{
+    height: 60px;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.navbar-content
+{
+    padding: 10px;
+}
+
+.carousel-image
+{
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+    bottom: 30%;
+}
+
+.slide
+{
+    display: none;
+    z-index: 1;
+    height: 500px;
+    overflow: hidden;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    top: 35%;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: none;
+    transition: background-color 0.6s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+/* Fading animation */
+.slide.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
