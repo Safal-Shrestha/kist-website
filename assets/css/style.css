@@ -1,15 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 body
 {
     margin: 0px;
-    background: rgb(234,172,86);
     background: linear-gradient(180deg, rgba(234,172,86,1) 0%, rgba(232,161,59,1) 35%, rgba(57,47,90,1) 64%, rgba(37,78,112,1) 100%);
+    font-family: "Oswald", sans-serif;
+}
+
+a{
+    text-decoration: none;
 }
 
 .header{
+    position: absolute;
     display: flex;
     justify-content: space-between;
     padding: 0px 50px;
-    position: absolute;
     left: 0px;
     right: 0px;
     z-index: 2;
@@ -33,14 +39,18 @@ body
 {
     padding: 10px;
     margin: 5px;
-    font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 20px;
     font-style: normal;
     color: rgb(255, 255, 255);
-    text-shadow: #000000;
     text-shadow: 6px 2px 5px #5b4a4a;
+}
+
+.navbar-content span
+{
+    position: relative;
+    bottom: 6px;
 }
 
 .navbar-content:hover
@@ -55,6 +65,17 @@ body
     z-index: 0;
     position: relative;
     bottom: 30%;
+}
+
+.title-img
+{
+    height: 406.5px;
+    overflow: hidden;
+}
+
+.title-img img{
+    position: absolute;    
+    bottom: 40%;
 }
 
 .slide
@@ -137,7 +158,6 @@ body
     padding: 10px;
     border-radius: 5px;
     backdrop-filter: blur(5px);
-    font-family: "Oswald", sans-serif;
 }
 
 .info-col p{
@@ -172,7 +192,6 @@ body
 
 .program-title
 {
-    font-family: "Oswald", sans-serif;
     font-weight: 300;
     font-size: 25px;
     color: white;
@@ -215,7 +234,6 @@ body
 .gallery-content p
 {
     color: white;
-    font-family: "Oswald", sans-serif;
     position: relative;
     font-size: 15px;
     font-weight: 400;
@@ -235,4 +253,63 @@ body
 {
     width: 275px;
     border-radius: 5px;
+}
+
+.title{
+    color: white;
+    background-color: blue;
+    display: flex;
+    justify-content: space-around;
+}
+
+.title-content
+{
+    font-weight: 500;
+    font-size: 40px;
+    margin: 20px;
+}
+
+.typing-content
+{
+    padding: 30px;
+    color: white;
+}
+
+.typing-content p
+{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+#dynamic-text {
+    color: greenyellow;
+    position: relative;
+}
+
+#dynamic-text::before {
+    content: "";
+    height: 30px;
+    width: 2px;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    background: greenyellow;
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite; /* Blinking cursor */
+}
+
+#dynamic-text.stop-blinking::before {
+    animation: none; /* Stops blinking when typing ends */
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.intro
+{
+    color: white;
+    font-weight: 200;
+    font-size: 20px;
+    padding: 30px;
 }
