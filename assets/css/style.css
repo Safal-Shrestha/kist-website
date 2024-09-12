@@ -1,6 +1,8 @@
 body
 {
     margin: 0px;
+    background: rgb(234,172,86);
+    background: linear-gradient(180deg, rgba(234,172,86,1) 0%, rgba(232,161,59,1) 35%, rgba(57,47,90,1) 64%, rgba(37,78,112,1) 100%);
 }
 
 .header{
@@ -116,4 +118,48 @@ body
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+
+.info
+{
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+    position: relative;
+    bottom: 15px;
+}
+
+.info-col
+{
+    width: 240px;
+    background-color: rgba(255, 255, 255, 0.413);
+    border: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    font-family: "Oswald", sans-serif;
+}
+
+.info-col p{
+    margin: 0px;
+}
+
+.info-data
+{
+    color: white;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.info-data-desc
+{
+    color: orange;
+    font-weight: 100;
+}
+
+.info-desc
+{
+    color: white;
+    font-weight: 200;
+    font-size: 20px;
 }
