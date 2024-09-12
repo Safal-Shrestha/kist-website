@@ -153,8 +153,8 @@ body
 
 .info-data-desc
 {
-    color: orange;
-    font-weight: 100;
+    color: blue;
+    font-weight: 300;
 }
 
 .info-desc
@@ -162,4 +162,77 @@ body
     color: white;
     font-weight: 200;
     font-size: 20px;
+}
+
+.programme
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.program-title
+{
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    color: white;
+    padding-left: 20px;
+}
+
+.gallery-content
+{
+    padding: 10px;
+}
+
+.gallery-content:hover
+{
+    /* position: relative;
+    bottom: 10px; */
+    animation-name: slideup;
+    animation-duration: .5s;
+}
+
+@keyframes slideup
+{
+    from {}
+    to
+    {
+        position: relative;
+        bottom: 10px
+    }
+}
+
+.blue
+{
+    background-color: blue;
+}
+
+.orange
+{
+    background-color: orange;
+}
+
+.gallery-content p
+{
+    color: white;
+    font-family: "Oswald", sans-serif;
+    position: relative;
+    font-size: 15px;
+    font-weight: 400;
+    bottom: 42px;
+    border-radius: 0px 0px 5px 5px;
+    padding: 5px 10px;
+}
+
+
+.gallery-row
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.program-img
+{
+    width: 275px;
+    border-radius: 5px;
 }
